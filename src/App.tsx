@@ -1,6 +1,15 @@
 import { FC } from "react";
-import "./App.css";
+// import firebase from "firebase";
 
-const App: FC = () => <div className="App">Hello,World</div>;
+import "./App.css";
+import Get from "firebase/get/index";
+
+const App: FC = () => (
+  <div className="App">
+    <h3>Get</h3>
+    <Get />
+    <h3>Put</h3>
+  </div>
+);
 
 export default App;

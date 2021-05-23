@@ -5,7 +5,6 @@ declare namespace NodeJS {
     readonly NODE_ENV: "development" | "production" | "test";
 
     /** Firebase config */
-    readonly REACT_APP_API_KEY: string;
     readonly REACT_APP_APIKEY: string;
     readonly REACT_APP_AUTHDOMAIN: string;
     readonly REACT_APP_DATABASEURL: string;
