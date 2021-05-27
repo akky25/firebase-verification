@@ -1,23 +1,22 @@
 import { FC } from "react";
-import logo from "./logo.svg";
+// import firebase from "firebase";
+
 import "./App.css";
+import Get from "firebase/get/index";
+import Put from "firebase/put/index";
+import Update from "firebase/update/index";
+import Delete from "firebase/delete/index";
 
 const App: FC = () => (
   <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
+    <h3>Get</h3>
+    <Get />
+    <h3>Put</h3>
+    <Put />
+    <h3>Update</h3>
+    <Update />
+    <h3>Delete</h3>
+    <Delete />
   </div>
 );
 
