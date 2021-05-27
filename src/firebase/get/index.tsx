@@ -13,25 +13,24 @@ const Get: FC = () => {
   const [users, setUsers] = useState<User[]>([]);
 
   // 全権取得後にuseStateを更新する
-  const handleClickFetchDocuments = () => {
-    const addUser = async () => {
-      const snapshot = await getAllDocuments();
-      const arrayUsers: User[] = [];
-      snapshot.forEach((doc) => {
-        arrayUsers.push({
-          ...(doc.data() as User),
-          userId: doc.id,
-        });
+  const handleClickFetchDocuments = async () => {
+    const snapshot = await getAllDocuments();
+    const arrayUsers: User[] = [];
+    snapshot.forEach((doc) => {
+      arrayUsers.push({
+        ...(doc.data() as User),
+        userId: doc.id,
       });
-      setUsers(arrayUsers);
-    };
-    void addUser();
+    });
+    setUsers(arrayUsers);
   };
 
   // stateのユーザーのリストを作成
   const userListeItems = users.map((user) => (
     <li key={user.userId}>
-      {user.name} : {user.age}
+      <p className="useItem">{user.userId}</p>
+      <p className="useItem">{user.name}</p>
+      <p className="useItem">{user.age}</p>
     </li>
   ));
 

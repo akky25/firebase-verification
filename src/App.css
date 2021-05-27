@@ -7,3 +7,26 @@ button {
   display: block;
   margin: 1%;
 }
+
+.msg {
+  margin-top: -4px;
+  margin-left: 2%;
+}
+
+.useItem {
+  display: inline-block;
+  min-width: 250px;
+  margin: 0;
+}
+
+.addform {
+  margin: 1%;
+}
+
+.addform > label {
+  margin-left: 1%;
+}
+
+.addform > button {
+  display: inline;
+}
