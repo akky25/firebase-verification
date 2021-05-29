@@ -1,25 +1,25 @@
 import { FC } from "react";
-// import firebase from "firebase";
+import { Route, Switch } from "react-router";
 
 import "./App.css";
-import Get from "firebase/get/index";
-import Put from "firebase/put/index";
-import Update from "firebase/update/index";
-import Delete from "firebase/delete/index";
-import RealTime from "firebase/realtime";
+import Home from "firebase/Home";
+import SignUp from "firebase/signup";
+import SignIn from "firebase/signin";
 
 const App: FC = () => (
   <div className="App">
-    <h3>Get</h3>
-    <Get />
-    <h3>Put</h3>
-    <Put />
-    <h3>Update</h3>
-    <Update />
-    <h3>Delete</h3>
-    <Delete />
-    <h3>Realtime</h3>
-    <RealTime />
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/singup">
+        <SignUp />
+      </Route>
+      <Route path="/singin">
+        <SignIn />
+      </Route>
+      <Route>not found</Route>
+    </Switch>
   </div>
 );
 
