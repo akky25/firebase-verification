@@ -60,7 +60,6 @@ module.exports = {
     ],
     "@typescript-eslint/no-unused-vars": [
       "warn",
-      // "error",
       {
         vars: "all",
         args: "after-used",

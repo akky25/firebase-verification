@@ -6,6 +6,7 @@ import Get from "firebase/get/index";
 import Put from "firebase/put/index";
 import Update from "firebase/update/index";
 import Delete from "firebase/delete/index";
+import RealTime from "firebase/realtime";
 
 const App: FC = () => (
   <div className="App">
@@ -17,6 +18,8 @@ const App: FC = () => (
     <Update />
     <h3>Delete</h3>
     <Delete />
+    <h3>Realtime</h3>
+    <RealTime />
   </div>
 );
 
